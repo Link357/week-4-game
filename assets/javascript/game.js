@@ -1,32 +1,34 @@
-var crystalOne;
-var crystalTwo;
-var crystalThree;
-var crystalFour;
-var myScore = 0;
+var crystalOne = 0;
+var crystalTwo = 0;
+var crystalThree = 0;
+var crystalFour = 0;
+var counter = 0;
 var targetNumber;
 var wins = 0;
-var losses = 0;
+var lose = 0;
 
 function beginGame() {
-    var crystalOne = Math.floor(Math.random() * 12) + 1;
-    var crystalTwo = Math.floor(Math.random() * 12) + 1;
-    var crystalThree = Math.floor(Math.random() * 12) + 1;
-    var crystalFour = Math.floor(Math.random() * 12) + 1;
-    var targetNumber = Math.floor(Math.random() * 101) + 20;
-    var myScore = 0;
-    $(".target-number").innerHTML(targetNumber);
-    $('.my-score').innerHTML(myScore);
+    crystalOne = [Math.floor(Math.random() * 12) + 1];
+    crystalTwo = [Math.floor(Math.random() * 12) + 1];
+    crystalThree = [Math.floor(Math.random() * 12) + 1];
+    crystalFour = [Math.floor(Math.random() * 12) + 1];
+    targetNumber = [Math.floor(Math.random() * 101) + 20];
+    counter = 0;
+    $(".target-number").html(targetNumber);
+    $('.my-score').html(counter);
 }
+beginGame();
 
 $(".crystal-one").on("click", function () {
-
-    counter += crystalOne;
-    $('.my-score').innerHTML(myScore);
-    if (counter === targetNumber) {
+    console.log(crystalOne);
+    counter = parseInt(counter) + parseInt(crystalOne);
+    console.log(counter)
+    $('.my-score').html(counter);
+    if (counter == targetNumber) {
         wins++;
         beginGame()
     }
-    if (counter > targetNumber) {
+    else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
         beginGame()
     }
@@ -34,13 +36,14 @@ $(".crystal-one").on("click", function () {
 
 $(".crystal-two").on("click", function () {
 
-    counter += crystalTwo;
-    $('.my-score').innerHTML(myScore);
-    if (counter === targetNumber) {
+    counter = parseInt(counter) + parseInt(crystalTwo);
+    console.log(counter)
+    $('.my-score').html(counter);
+    if (counter == targetNumber) {
         wins++;
         beginGame()
     }
-    if (counter > targetNumber) {
+    else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
         beginGame()
     }
@@ -48,13 +51,19 @@ $(".crystal-two").on("click", function () {
 
 $(".crystal-three").on("click", function () {
 
-    counter += cyrstalThree;
-    $('.my-score').innerHTML(myScore);
-    if (counter === targetNumber) {
+    counter = parseInt(counter) + parseInt(crystalThree);
+    console.log(counter);
+    console.log(targetNumber);
+    console.log(parseInt(counter));
+    console.log(parseInt(targetNumber));
+
+
+    $('.my-score').html(counter);
+    if (counter == targetNumber) {
         wins++;
         beginGame()
     }
-    if (counter > targetNumber) {
+    else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
         beginGame()
     }
@@ -62,13 +71,14 @@ $(".crystal-three").on("click", function () {
 
 $(".crystal-four").on("click", function () {
 
-    counter += crystalFour;
-    $('.my-score').innerHTML(myScore);
-    if (counter === targetNumber) {
+    counter = parseInt(counter) + parseInt(crystalFour);
+    console.log(counter)
+    $('.my-score').html(counter);
+    if (counter == targetNumber) {
         wins++;
         beginGame()
     }
-    if (counter > targetNumber) {
+    else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
         beginGame()
     }
