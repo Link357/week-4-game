@@ -1,0 +1,44 @@
+body {
+    background-color: lightgrey
+}
+.crystal-one {
+    width: 100px;
+    height: 100px
+}
+.crystal-two {
+    width: 100px;
+    height: 100px;
+}
+.crystal-three {
+    width: 100px;
+    height: 100px;
+}
+.crystal-four {
+    width: 100px;
+    height: 100px;
+}
+.my-score {
+    font-size: 16px;
+}
+.target {
+    background-color: teal;
+    font-size: 16px;
+    height: 100px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+.score {
+    background-color: teal;
+    font-size: 16px;
+    height: 100px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+.instructions {
+    background-color: orangered;
+    width: 30%;
+}
+.score-board {
+    background-color: orangered;
+    width: 30%;
+}

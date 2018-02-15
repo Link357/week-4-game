@@ -16,6 +16,8 @@ function beginGame() {
     counter = 0;
     $(".target-number").html(targetNumber);
     $('.my-score').html(counter);
+    $('.wins').html(wins);
+    $('.lose').html(lose);
 }
 beginGame();
 
@@ -26,10 +28,12 @@ $(".crystal-one").on("click", function () {
     $('.my-score').html(counter);
     if (counter == targetNumber) {
         wins++;
+        $('.wins').html(wins);
         beginGame()
     }
     else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
+        $('.lose').html(lose);
         beginGame()
     }
 });
@@ -41,10 +45,12 @@ $(".crystal-two").on("click", function () {
     $('.my-score').html(counter);
     if (counter == targetNumber) {
         wins++;
+        $('.wins').html(wins);
         beginGame()
     }
     else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
+        $('.lose').html(lose);
         beginGame()
     }
 });
@@ -61,10 +67,12 @@ $(".crystal-three").on("click", function () {
     $('.my-score').html(counter);
     if (counter == targetNumber) {
         wins++;
+        $('.wins').html(wins);
         beginGame()
     }
     else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
+        $('.lose').html(lose);
         beginGame()
     }
 });
@@ -76,10 +84,13 @@ $(".crystal-four").on("click", function () {
     $('.my-score').html(counter);
     if (counter == targetNumber) {
         wins++;
+        $('.wins').html(wins);
         beginGame()
     }
     else if (parseInt(counter) > parseInt(targetNumber)) {
         lose++;
+        $('.lose').html(lose);
         beginGame()
     }
 });
+
